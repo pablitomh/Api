@@ -1,16 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="pokemon">
-<head>
-    
-	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<title>pokemon</title>
-</head>
-<body>
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
-<script src="script.js"></script>
-</body>
+<html ng-app="pokemon">
+	<head>
+		<!--jquery.js-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="style.css">
+		<title>Pokemon</title>
+	</head>
+	<body ng-controller="pokemon">
+        <dir class="t">
+        	<center><h1>POKEMON</h1></center>
+        </dir>
+		<div class="p" ng-repeat="poke in pokemon">
+		  <p>{{poke.data.name}}</p>
+        </div>
+		<!--angular.js-->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+		<!--script local-->
+		<script src="script.js"></script>
+	</body>
 </html>
